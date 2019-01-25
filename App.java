@@ -93,8 +93,8 @@ class App {
 	
 
 	private FlockDisplay disp;
-	private int dispTimeStep = 200; // millisecs - change this as needed
-	private int flapTimeStep = 500; // millisecs - change this as needed
+	private int dispTimeStep = 25; // millisecs - change this as needed
+	private int flapTimeStep = 100; // millisecs - change this as needed
 	private ArrayList<Bird> birds;
 	private Flock currentFlock, newFlock;
 

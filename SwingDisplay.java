@@ -62,6 +62,7 @@ class SwingDisplay implements FlockDisplay {
 		canvas = new JPanel() {
 			public void paintComponent(Graphics g) {
 				super.paintComponent(g);
+				setBackground(Color.black);
 				int i = 0;
 				for(Bird bird: birds) {
 					g.setColor(colors[i%6]);
@@ -69,7 +70,7 @@ class SwingDisplay implements FlockDisplay {
 					Position loc = bird.getPos();
 					//System.out.println(loc);
 					// next few lines can be replaced with any other interesting way of drawing birds
-					g.drawOval(loc.getX(), loc.getY(), 10, 10);
+					g.fillOval(loc.getX(), loc.getY(), 10, 10);
 					g.drawString(bird.getName(),
 						 loc.getX() , loc.getY() );
 				}

@@ -6,18 +6,20 @@ import flockbase.Position;
 
 public class Bird_IMT2017011 extends flockbase.Bird{
     private int isLeader;
-    private double bubbleRadius = 25.0;
+    private double bubbleRadius = 50.0;
     // int vx = getMaxSpeed()/Math.sqrt(2);
     // int vy = getMaxSpeed()/Math.sqrt(2);
     // private Position velocity = new Position(vx,vy);
-    private Position velocity = new Position(10,10);    
+    private Position velocity = new Position(5,5);    
 
     public Bird_IMT2017011(){
         super();
     }
 
     public String getName(){
-        return "Bird_IMT2017011";
+        if (isLeader == 0)
+            return "Bird_IMT2017011";
+        return "Leader_IMT2017011";
     }
     
     public double absoluteDistanceBetweenBirds(Bird bird){
@@ -49,7 +51,7 @@ public class Bird_IMT2017011 extends flockbase.Bird{
         int y = 0;
         for (Bird b : getFlock().getBirds()){
             if (b != bird){
-                if((Math.abs(b.getPos().getX() - bird.getPos().getX()) < 25) && (Math.abs(b.getPos().getY() - bird.getPos().getY()) < 25)){
+                if((Math.abs(b.getPos().getX() - bird.getPos().getX()) < 50) && (Math.abs(b.getPos().getY() - bird.getPos().getY()) < 50)){
                     x = x - (b.getPos().getX() - bird.getPos().getX());
                     y = y - (b.getPos().getY() - bird.getPos().getY());
                 }

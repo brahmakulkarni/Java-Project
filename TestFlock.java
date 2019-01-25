@@ -1,6 +1,5 @@
 import flockbase.Bird;
 import flockbase.Flock;
-import sample.Flock_IMT2017011;
 import sample.*;
 
 //sample main (which will be replaced by an interactive front-end. 
@@ -18,12 +17,23 @@ public class TestFlock {
 		b1.setPos(10,10);
 		f.addBird(b1);
 		
-		for(int i=0;i<5;i++){
-			Bird b = new Bird_IMT2017011();
-			b.setPos(i*100,  10);
-			f.addBird(b);
-		}
-	
+		// for(int i=0;i<5;i++){
+		// 	Bird b = new Bird_IMT2017011();
+		// 	b.setPos(i*100,  10);
+		// 	f.addBird(b);
+		// }
+
+		Bird b2 = new Bird2017039();
+		b2.setPos(100,  10);
+		f.addBird(b2);
+
+		Bird b3 = new Bird_IMT2017507();
+		b3.setPos(200,  10);
+		f.addBird(b3);
+
+		Bird b4 = new Bird_IMT2017025();
+		b4.setPos(300,  10);
+		f.addBird(b4);
 		
 		FlockDisplay disp = new SwingDisplay();
 		//FlockDisplay disp = new TextDisplay();
